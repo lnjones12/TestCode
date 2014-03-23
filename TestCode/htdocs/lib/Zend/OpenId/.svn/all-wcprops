@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/1088/Competitor%20Wireless/lib/Zend/OpenId
+END
+Provider.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/1088/Competitor%20Wireless/lib/Zend/OpenId/Provider.php
+END
+Consumer.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/1088/Competitor%20Wireless/lib/Zend/OpenId/Consumer.php
+END
+Extension.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1088/Competitor%20Wireless/lib/Zend/OpenId/Extension.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1088/Competitor%20Wireless/lib/Zend/OpenId/Exception.php
+END

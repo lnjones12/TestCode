@@ -1,0 +1,47 @@
+.box1 h1, .box2 h1 {
+    border-bottom: 2px solid #E9242B;
+    color: #E9242B;
+	}
+.banner{	
+	border-bottom: 2px solid #F00;
+  	background:url('/public/images/backgrounds/rnrHeader.png'); 
+	}
+a{ 
+	color: #E9242B; 
+}
+#notloggedin {
+	color:#E9242B;
+}
+#notloggedin:hover {
+	color:black;
+}
+.important{
+		color: #E9242B;
+	}
+	
+.main .steps .on .big {
+	color: #CD0007;
+	}
+.main .steps .on .small {
+	color: #CD0007;
+	}
+.main .steps .off .big {
+	color: #EE9698;
+	}
+.main .steps .off .small {
+	color: #EE9698;
+	}
+@media only screen and (min-width: 600px){	
+	.main .steps .on {
+	border: 5px solid #CD0007;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	}
+.main .steps .off {
+	border: 5px solid #EE9698;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	}
+}

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Rest
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Rest/Client.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Rest/Exception.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Rest/Server.php
+END

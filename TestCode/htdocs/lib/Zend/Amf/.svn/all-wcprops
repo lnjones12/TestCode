@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf
+END
+Constants.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf/Constants.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf/Exception.php
+END
+Response.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf/Response.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf/Server.php
+END
+Request.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/1099/Competitor%20Wireless/lib/Zend/Amf/Request.php
+END

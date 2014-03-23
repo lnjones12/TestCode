@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati
+END
+GetInfoResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/GetInfoResult.php
+END
+ResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/ResultSet.php
+END
+DailyCountsResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/DailyCountsResult.php
+END
+TagsResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/TagsResult.php
+END
+BlogInfoResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/BlogInfoResult.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/Exception.php
+END
+Utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/Utils.php
+END
+Author.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/Author.php
+END
+CosmosResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/CosmosResult.php
+END
+KeyInfoResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/KeyInfoResult.php
+END
+SearchResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/SearchResult.php
+END
+TagsResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/TagsResultSet.php
+END
+DailyCountsResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/DailyCountsResultSet.php
+END
+TagResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/TagResult.php
+END
+CosmosResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/CosmosResultSet.php
+END
+Result.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/Result.php
+END
+Weblog.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/Weblog.php
+END
+SearchResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/SearchResultSet.php
+END
+TagResultSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Service/Technorati/TagResultSet.php
+END

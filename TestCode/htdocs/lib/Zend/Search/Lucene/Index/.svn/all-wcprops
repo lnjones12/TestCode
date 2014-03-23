@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index
+END
+DictionaryLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/DictionaryLoader.php
+END
+Writer.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/Writer.php
+END
+DocsFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/DocsFilter.php
+END
+SegmentInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/SegmentInfo.php
+END
+FieldInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/FieldInfo.php
+END
+SegmentWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/SegmentWriter.php
+END
+TermInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/TermInfo.php
+END
+SegmentMerger.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/SegmentMerger.php
+END
+SegmentInfoPriorityQueue.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/SegmentInfoPriorityQueue.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1090/Competitor%20Wireless/lib/Zend/Search/Lucene/Index/Term.php
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory
+END
+Manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory/Manager.php
+END
+Value.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory/Value.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory/Exception.php
+END
+Container.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory/Container.php
+END
+AccessController.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/1093/Competitor%20Wireless/lib/Zend/Memory/AccessController.php
+END

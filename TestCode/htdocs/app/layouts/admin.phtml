@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+<head> 
+    <title> CW Customer Service Portal  </title> 
+    <meta name="description" content="" /> 
+	<link rel="stylesheet"  href="/public/css/admin.css" type="text/css" media="all" /> 
+</head>
+<body>
+	<div id="background-container">
+		<!-- menu --> 
+		<div class="menu">
+			<ul>
+				<li><a href="/admin">Home</a></li> 
+				<li><a href="/admin/trackers">Trackers</a></li> 
+				<li><a href="/admin/apptrackers">App</a></li> 
+				<li><a href="/admin/users">Users</a></li>
+				<li><a href="/admin/runners">Runners</a></li>
+				<li><a href="/admin/events">Events</a></li> 
+				<li><a href="/admin/invoices">Invoices</a></li>
+				<li><a href="/admin/phones">Phones</a></li>
+				<li><a href="/admin/auth/logout">Log Out</a></li>
+			</ul>
+		</div>
+		<!-- /menu -->
+		<!-- body -->
+		<div id="main-content">
+			<div class="padding-div">
+			<!-- Start Body -->
+			<?php echo $this->layout()->CONTENT; ?>
+			<!-- / End Body -->
+			</div>
+		</div>
+		<!-- / body -->
+		<!-- footer -->
+		<div id="footer">
+		</div>
+		<!-- footer --> 
+		<div class="clear"></div>
+	</div>
+</body> 
+</html>

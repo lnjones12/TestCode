@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap
+END
+Wsdl.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Soap/Wsdl.php
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Soap/Client.php
+END
+Server.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Soap/Server.php
+END
+AutoDiscover.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/1091/Competitor%20Wireless/lib/Zend/Soap/AutoDiscover.php
+END

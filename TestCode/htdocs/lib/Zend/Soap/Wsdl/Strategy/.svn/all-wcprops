@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy
+END
+AnyType.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/AnyType.php
+END
+ArrayOfTypeComplex.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/ArrayOfTypeComplex.php
+END
+ArrayOfTypeSequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/ArrayOfTypeSequence.php
+END
+DefaultComplexType.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/DefaultComplexType.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/Interface.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/Soap/Wsdl/Strategy/Abstract.php
+END

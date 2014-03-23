@@ -1,0 +1,206 @@
+<project name="Competitor Wireless" default="dev" basedir=".">
+	<property name="projectSrcDir" location="C:\dev\projects\eclipse-java\CompetitorWireless"/>
+	<property name="devBuildDir" location="C:\Apache2.2\sites\competitor_wireless\htdocs"/>
+	<property name="devURL" location="http://localhost:8082"/>
+	<property name="testBuildDir" location="c:\dev\server\apache\sites\wireless-test\htdocs"/>
+	<property name="testURL" location="http://localhost:8091"/>
+	<property name="prodBuildDir" location="c:\dev\projects\releases\wireless\prod"/>
+	<property name="prodURL" location="http://www.competitorwireless.com"/>
+	<property name="phpDir" location="C:\PHP"/>
+	<property name="testsDir" location="${projectSrcDir}/tests"/>
+	
+	<!-- // TODO: run shrinksafe on EVERYTHING -->
+	
+	
+	<target name="cleanDev">
+		<!-- Wipe out all of the dev files first -->
+		<echo message="Deleting ${devBuildDir}..."/>
+		<delete dir="${devBuildDir}"/>
+		<!-- Then run dev build -->
+		<antcall target="dev"/>
+	</target>
+	
+	<target name="dev">
+		<!-- Development local build -->
+		<echo message="Building local site at ${devBuildDir}..."/>
+		<echo message="Copying files..."/>
+		<copy todir="${devBuildDir}" verbose="true">
+			<fileset dir="${projectSrcDir}">
+				<exclude name="**/build.xml"/>
+				<exclude name="**/.project"/>
+				<exclude name="**/sql"/>
+				<exclude name="**/*.sql"/>
+				<exclude name="**/dojo/release/**"/>
+			</fileset>	
+		</copy>
+		
+		<!-- Copy correct configuration file -->
+		<move file="${devBuildDir}/app/config_dev.php" tofile="${devBuildDir}/app/config.php"/>
+		
+		<!-- Copy correct .htaccess file -->
+		<move file="${devBuildDir}/.htaccess_dev" tofile="${devBuildDir}/.htaccess"/>
+		
+		<!-- Do regular expression substitutions -->
+		
+		<replaceregexp flags="g">
+			<!-- Sets form method to GET for dev, POST for production -->
+			<regexp pattern="##FORM_METHOD##"/>
+			<substitution expression="GET"/>
+			<fileset dir="${devBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		<replaceregexp flags="g">
+			<!-- Sets DOJO debugging on for DEV, off for TEST and PROD -->
+			<regexp pattern="##DOJO_DEBUG##"/>
+			<substitution expression="true"/>
+			<fileset dir="${devBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		<replaceregexp flags="g">
+			<!-- Sets DOJO include file.. in dev, we can go w/ individual files, but in
+				production we want a single file, with shrinksafe run over it -->
+			<regexp pattern="##DOJO_INCLUDE_FILE##"/>
+			<substitution expression="/public/js/dojo/dojo/dojo.js"/>
+			<fileset dir="${devBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+	</target>
+	
+	<!-- this runs locally as well, but with customizations for performance tuning -->
+	<target name="test">
+		<!-- Development local build -->
+		<echo message="Building local site at ${testBuildDir}..."/>
+		<echo message="Copying files..."/>
+		<copy todir="${testBuildDir}" verbose="true">
+			<fileset dir="${projectSrcDir}">
+				<exclude name="**/build.xml"/>
+				<exclude name="**/.project"/>
+				<exclude name="**/sql"/>
+				<exclude name="**/*.sql"/>
+				<exclude name="/public/js/dojo/**"/>
+			</fileset>	
+		</copy>
+		
+		<!-- Copy correct configuration file -->
+		<move file="${testBuildDir}/app/config_test.php" tofile="${testBuildDir}/app/config.php"/>
+		
+		<!-- Copy correct .htaccess file -->
+		<move file="${testBuildDir}/.htaccess_test" tofile="${testBuildDir}/.htaccess"/>
+		
+		<!-- Do regular expression substitutions -->
+		
+		<replaceregexp flags="g">
+			<!-- Sets form method to GET for dev, POST for production -->
+			<regexp pattern="##FORM_METHOD##"/>
+			<substitution expression="POST"/>
+			<fileset dir="${testBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		<replaceregexp flags="g">
+			<!-- Sets DOJO debugging on for DEV, off for TEST and PROD -->
+			<regexp pattern="##DOJO_DEBUG##"/>
+			<substitution expression="true"/>
+			<fileset dir="${testBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		
+		<replaceregexp flags="g">
+			<!-- Sets DOJO include file.. in dev, we can go w/ individual files, but in
+				production we want a single file, with shrinksafe run over it -->
+			<regexp pattern="##DOJO_INCLUDE_FILE##"/>
+			<substitution expression="/public/js/dojo/dojo/cw_dojo_build.js"/>
+			<fileset dir="${testBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		
+		<replaceregexp flags="g">
+			<!-- Switches DOJO xhrGet() AJAX calls to xhrPost() calls -->
+			<regexp pattern="dojo.xhrGet"/>
+			<substitution expression="dojo.xhrPost"/>
+			<fileset dir="${testBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		
+		<!-- // TODO: automate dojo build into this --> 
+		<!-- Specifically copy over the dojo release -->
+		<copy todir="${testBuildDir}/public/js/dojo/">
+			<fileset dir="${projectSrcDir}/public/js/dojo/release/dojo">
+			</fileset>
+		</copy>
+	</target>
+	
+	<!-- this runs locally as well, but with customizations for performance tuning -->
+	<target name="prod">
+		<!-- Development local build -->
+		<echo message="Building local site at ${prodBuildDir}..."/>
+		<echo message="Copying files..."/>
+		<copy todir="${prodBuildDir}" verbose="true">
+			<fileset dir="${projectSrcDir}">
+				<exclude name="**/build.xml"/>
+				<exclude name="**/.project"/>
+				<exclude name="**/sql"/>
+				<exclude name="**/*.sql"/>
+				<exclude name="/public/js/dojo/**"/>
+			</fileset>	
+		</copy>
+		
+		<!-- Copy correct configuration file -->
+		<move file="${prodBuildDir}/app/config_prod.php" tofile="${prodBuildDir}/app/config.php"/>
+		
+		<!-- Copy correct .htaccess file -->
+		<move file="${prodBuildDir}/.htaccess_prod" tofile="${prodBuildDir}/.htaccess"/>
+		
+		<!-- Do regular expression substitutions -->
+		
+		<replaceregexp flags="g">
+			<!-- Sets form method to GET for dev, POST for production -->
+			<regexp pattern="##FORM_METHOD##"/>
+			<substitution expression="POST"/>
+			<fileset dir="${prodBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		<replaceregexp flags="g">
+			<!-- Sets DOJO debugging on for DEV, off for TEST and PROD -->
+			<regexp pattern="##DOJO_DEBUG##"/>
+			<substitution expression="false"/>
+			<fileset dir="${prodBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+		
+		<replaceregexp flags="g">
+			<!-- Sets DOJO include file.. in dev, we can go w/ individual files, but in
+				production we want a single file, with shrinksafe run over it -->
+			<regexp pattern="##DOJO_INCLUDE_FILE##"/>
+			<substitution expression="/public/js/dojo/dojo/cw_dojo_build.js"/>
+			<fileset dir="${prodBuildDir}">
+				<include name="**/*.phtml"/>
+			</fileset>
+		</replaceregexp>
+
+		
+		<!-- // TODO: automate dojo build into this --> 
+		<!-- Specifically copy over the dojo release -->
+		<copy todir="${prodBuildDir}/public/js/dojo/">
+			<fileset dir="${projectSrcDir}/public/js/dojo/release/dojo">
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Run battery of Unit tests -->
+	<target name="unitTests">
+		<exec dir="${testsDir}" executable="phpunit.bat" failonerror="true">
+			<arg line="--colors --verbose --configuration ${testsDir}/phpunit.xml"></arg>
+		</exec>
+	</target>
+	
+</project>
+	

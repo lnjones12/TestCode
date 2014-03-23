@@ -1,0 +1,11 @@
+# --- URL Rewriting for Zend Framework... pipe through index.php except for images, css, etc.
+RewriteEngine on
+
+# Rules for PCI compliance.  Prevents Blind SQL injections.  We use prepared statements, so moot.
+RewriteCond %{QUERY_STRING} [^a-z](cast|char|convert|declare|delete|drop|exec|insert|meta|script|select|set|truncate)[^a-z] [NC]
+RewriteRule (.*) - [F,L]
+
+RewriteCond %{REQUEST_URI} !/public
+RewriteCond %{REQUEST_FILENAME} !\.(js|ico|gif|jpg|jpeg|png|css)$
+RewriteRule .* index.php
+

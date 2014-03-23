@@ -1,0 +1,81 @@
+<RecordSet>
+	<!-- 2 Records for event that exists (San Diego Marathon) -->
+	<Record>
+		<Registration_ID>7001</Registration_ID>
+		<Person_ID>12</Person_ID>
+		<Registrant_Name>Christopher Beck</Registrant_Name>
+		<Registrant_Email>cbeck@competitorgroup.com</Registrant_Email>
+		<Event_Name>San Diego Marathon</Event_Name>
+		<Race_Name></Race_Name>
+		<Race_Year>2009</Race_Year>
+		<Wireless_Tracking_Flag>Yes</Wireless_Tracking_Flag>
+		<Race_Date>5/31/2009 7:00:00 AM</Race_Date>
+		<Race_Location>Balboa Park</Race_Location>
+		<Registrant_Age>30</Registrant_Age>
+		<Registrant_City>San Diego</Registrant_City>
+		<Registrant_State>CA</Registrant_State>
+	</Record>
+	<Record>
+		<Registration_ID>7002</Registration_ID>
+		<Person_ID>13</Person_ID>
+		<Registrant_Name>Frank Stallone</Registrant_Name>
+		<Registrant_Email>bro@rocky.com</Registrant_Email>
+		<Event_Name>San Diego Marathon</Event_Name>
+		<Race_Name></Race_Name>
+		<Race_Year>2009</Race_Year>
+		<Wireless_Tracking_Flag>No</Wireless_Tracking_Flag>
+		<Race_Date>5/31/2009 7:00:00 AM</Race_Date>
+		<Race_Location>Balboa Park</Race_Location>
+		<Registrant_Age>30</Registrant_Age>
+		<Registrant_City>San Diego</Registrant_City>
+		<Registrant_State>CA</Registrant_State>
+	</Record>
+	<!-- 1 Record for event that does not exist (Carlsbad Fun Run) -->
+	<Record>
+		<Registration_ID>7003</Registration_ID>
+		<Person_ID>14</Person_ID>
+		<Registrant_Name>Ben Nowacky</Registrant_Name>
+		<Registrant_Email>bnowacky@competitorgroup.com</Registrant_Email>
+		<Event_Name>Carlsbad Fun Run</Event_Name>
+		<Race_Name></Race_Name>
+		<Race_Year>2009</Race_Year>
+		<Wireless_Tracking_Flag>Yes</Wireless_Tracking_Flag>
+		<Race_Date>6/25/2009 8:00:00 AM</Race_Date>
+		<Race_Location>Carlsbad Park</Race_Location>
+		<Registrant_Age>30</Registrant_Age>
+		<Registrant_City>San Diego</Registrant_City>
+		<Registrant_State>CA</Registrant_State>
+	</Record>
+	<!-- 1 more record for event that already exists (San Diego Marathon) -->
+	<Record>
+		<Registration_ID>7004</Registration_ID>
+		<Person_ID>15</Person_ID>
+		<Registrant_Name>Al Bundy</Registrant_Name>
+		<Registrant_Email>married@with.children.com</Registrant_Email>
+		<Event_Name>San Diego Marathon</Event_Name>
+		<Race_Name></Race_Name>
+		<Race_Year>2009</Race_Year>
+		<Wireless_Tracking_Flag>No</Wireless_Tracking_Flag>
+		<Race_Date>5/31/2009 7:00:00 AM</Race_Date>
+		<Race_Location>Balboa Park</Race_Location>
+		<Registrant_Age>30</Registrant_Age>
+		<Registrant_City>San Diego</Registrant_City>
+		<Registrant_State>CA</Registrant_State>
+	</Record>
+	<!-- 1 more new event (Sacramento Sprint Triathlon) -->
+	<Record>
+		<Registration_ID>7005</Registration_ID>
+		<Person_ID>16</Person_ID>
+		<Registrant_Name>Sandy Thurman</Registrant_Name>
+		<Registrant_Email>sthurman@gmail.com</Registrant_Email>
+		<Event_Name>Sacramento Sprint Triathlon</Event_Name>
+		<Race_Name></Race_Name>
+		<Race_Year>2009</Race_Year>
+		<Wireless_Tracking_Flag>Yes</Wireless_Tracking_Flag>
+		<Race_Date>8/12/2009 6:30:00 AM</Race_Date>
+		<Race_Location>Sacramento Trail Park</Race_Location>
+		<Registrant_Age>30</Registrant_Age>
+		<Registrant_City>San Diego</Registrant_City>
+		<Registrant_State>CA</Registrant_State>
+	</Record>				
+</RecordSet>

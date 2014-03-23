@@ -1,0 +1,118 @@
+<?php 
+	$using_ie6 = (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== FALSE); 
+	if($using_ie6){
+		header( 'Location: /public/browser.html' ) ;
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- <css> -->
+<link href="/public/css/master.css" rel="stylesheet" type="text/css" />
+<!-- </csss> -->
+
+<style type="text/css">
+    @import url("/public/js/dojo/dijit/themes/tundra/tundra.css");
+</style>
+
+<!--[if lt IE 7]>
+        <script type="text/javascript" src="/public/js/general.js"></script>
+<![endif]--> 
+ 
+<script type="text/javascript" src="/public/js/dojo/dojo/dojo.js"
+	    djConfig="parseOnLoad:true, isDebug:false, preventBackButtonFix:false">
+</script>	
+
+<script type="text/javascript" src="/public/js/competitorWirelessCommon.js"></script>
+<script type="text/javascript" src="/public/js/dojo/dojo/cw_dojo_build.js"></script>
+
+<script type="text/javascript">
+	dojo.require('dijit.Dialog');
+</script>
+
+<?php
+	if (isset($this->authenticatedUserJson) && ($this->authenticatedUserJson != null)) {
+		echo '<script type="text/javascript">';
+		echo 'Auth.authenticatedUser = ' . $this->authenticatedUserJson . ';';
+		echo '</script>';
+	}
+?>
+
+
+<?php
+	echo $this->headTitle(); 
+	echo $this->headScript();
+	echo $this->headLink();
+?>
+
+</head>
+
+<body class="tundra">
+	<!-- <center> -->
+	<div id="center">		<!-- <content> -->
+		<div id="content">
+			<!-- <header> --> 
+			<div class="header">
+				<div class="logo">
+					<img src="/public/images/backgrounds/logo.png" width="370" height="75" border="0" />
+				</div>
+				<!-- <menu> -->
+
+				<div class="menu">
+                     <div class="box">
+                    	<div class="tiny">01</div>
+                        <div class="regular"><a href="/demo/tracking/contact">Contact Us</a></div>
+                     </div>
+ 				</div>
+
+				<!-- </menu> --> 
+			</div>
+			<!-- </header> --> 
+			
+			<?php echo $this->layout()->CONTENT; ?>
+
+			<div class="brclear"></div>
+			
+		</div>
+		<!-- </content> -->
+		<div class="footer">
+			<div class="logo">
+				<div class="link" style="width:80px;">
+					<a href="/demo/tracking/contact">CONTACT US</a>
+				</div>
+				<div class="link" style="width:50px;">
+					<a href="/demo/tracking/privacy" >PRIVACY</a>
+				</div>
+				<div class="copyright">
+					&copy; 2009 Competitor Group - All Rights Reserved - <a href="/demo/tracking/terms"> Terms of Service</a>
+				</div>
+			</div>
+		</div>
+		<div class="brclear"></div>
+	</div>
+<!-- </center> -->
+
+<!-- Google analytics -->
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-185467-14");
+	pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+<script type="text/javascript"> var cbjspath = "static.chartbeat.com/js/chartbeat.js?uid=2450&domain=competitorwireless.com"; var cbjsprotocol = (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://"); document.write(unescape("%3Cscript src='"+cbjsprotocol+cbjspath+"' type='text/javascript'%3E%3C/script%3E")) </script>
+
+</body>
+</html>

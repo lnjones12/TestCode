@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar
+END
+ListEntry.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar/ListEntry.php
+END
+ListFeed.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar/ListFeed.php
+END
+EventEntry.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar/EventEntry.php
+END
+EventFeed.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar/EventFeed.php
+END
+EventQuery.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/1081/Competitor%20Wireless/lib/Zend/Gdata/Calendar/EventQuery.php
+END

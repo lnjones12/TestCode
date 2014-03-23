@@ -1,0 +1,45 @@
+# --- URL Rewriting for Zend Framework... pipe through index.php except for images, css, etc.
+RewriteEngine on
+
+# Send everything to https until I get a strategy to break it all up
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.competitorwireless.lan/$1 [R,L]
+
+# Rules for PCI compliance.  Prevents Blind SQL injections.  We use prepared statements, so moot.
+RewriteCond %{QUERY_STRING} [^a-z](cast|char|convert|declare|delete|drop|exec|insert|meta|script|select|set|truncate)[^a-z] [NC]
+RewriteRule (.*) - [F,L]
+
+RewriteCond %{REQUEST_URI} !/public
+RewriteCond %{REQUEST_FILENAME} !\.(js|ico|gif|jpg|jpeg|png|css)$
+RewriteRule .* index.php
+
+# --- Caching policy
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/gif "access plus 10 days"
+	ExpiresByType image/jpeg "access plus 10 days"
+	ExpiresByType image/png "access plus 10 days"
+	ExpiresByType text/css "access plus 10 days"
+	ExpiresByType text/javascript "access plus 10 days"
+	ExpiresByType application/javascript "access plus 10 days"
+</IfModule>
+
+# --- File compression
+<IfModule mod_deflate.c>
+ 	SetOutputFilter DEFLATE
+	# Compress text output.
+ 	AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/x-javascript
+  	<IfModule mod_headers.c>
+		# properly handle requests coming from behind proxies
+		Header append Vary User-Agent
+ 	</IfModule>
+</IfModule>
+
+# Properly handle old browsers that do not support compression
+<IfModule mod_deflate.c>
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+	# Explicitly exclude binary files from compression just in case
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf|swf|ico|zip)$ no-gzip
+</IfModule>

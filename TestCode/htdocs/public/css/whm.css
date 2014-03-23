@@ -1,0 +1,64 @@
+.box1 h1, .box2 h1 {
+    border-bottom: 2px solid #F10284;
+    color: #F10284;
+	}
+.banner{	
+	border-bottom: 2px solid #F10284;
+  	background:url('/public/images/backgrounds/whmHeader.png'); 
+	}
+a{ 
+	color: #F10284; 
+}
+#notloggedin {
+	color:#F10284;
+}
+#notloggedin:hover {
+	color:black;
+}
+.important{
+		color: #F10284;
+	}
+.main .steps .on .big {
+	color: #F10284;
+	}
+.main .steps .on .small {
+	color: #F10284;
+	}
+.main .steps .off .big {
+	color: #EF99C8;
+	}
+.main .steps .off .small {
+	color: #EF99C8;
+	}
+.banner{
+	height: 205px;
+	}
+.menu {
+    height: 38px;
+}
+@media only screen and (min-width: 480px){
+	.menu{
+		height:20px;
+	}
+	.banner{
+		height:165px;
+	}
+		
+}
+@media only screen and (min-width: 600px){
+	.banner{
+		height:145px;
+	}
+	.main .steps .on {
+	border: 5px solid #F10284;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	}
+.main .steps .off {
+	border: 5px solid #EF99C8;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	}
+}

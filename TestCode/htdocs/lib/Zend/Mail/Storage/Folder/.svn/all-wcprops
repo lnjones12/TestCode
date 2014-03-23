@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/Mail/Storage/Folder
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/Mail/Storage/Folder/Interface.php
+END
+Maildir.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/Mail/Storage/Folder/Maildir.php
+END
+Mbox.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/Mail/Storage/Folder/Mbox.php
+END

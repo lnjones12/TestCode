@@ -1,0 +1,1131 @@
+/* Start Reset ---------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+ol{
+	list-style-position: inside;
+	margin-bottom:20px;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}	
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset ---------------------------- */
+
+/* Start Global ----------------------------- */	
+img, video, embed, object, canvas object, table {
+	max-width: 100%;
+}
+video {
+	height: auto;
+}
+a, a:visited { 
+	text-decoration: none; 
+}
+a:hover   { 
+	color: black; border-bottom: 1px dashed black; 
+}
+strong{
+	font-weight:bold;
+}		
+.brclear {
+	clear: both;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix {
+	zoom: 1; 
+}
+/* End Global  ----------------------------- */
+html { 
+	overflow-y:scroll;
+	overflow-x:hidden;
+	overflow: -moz-scrollbars-vertical;	
+}
+body {
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	font: normal 100% Arial,Helvetica,sans-serif;
+	color: #444;
+	background-color: #D9D9D9;
+}	
+p {
+	margin: 0 0 20px 0;
+	font-size: 1em;	
+	line-height:1.250em;
+}
+h1, h2, h3, h4 {
+	clear:both;
+	color:#333;
+}
+h1 { 
+	font-size:2em; 
+}
+h2 { 
+	font-size:1.2em; 
+}
+h3 {
+	font-size:1em; 
+}
+input {
+	border: 1px solid gainsboro;
+}
+#center {
+	width:1024px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 1%;
+	z-index:100;
+}
+#content {
+	clear:both;
+}
+#bgcontent {
+	max-width:960px;
+	width:100%;
+	margin: 0px auto;
+	padding:10px;
+	background-color: white;
+	border: 2px solid #BCBCBC;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	-moz-border-top-left-radius:7px;
+	-moz-border-top-right-radius:7px;
+	-webkit-border-top-left-radius:7px;
+	-webkit-border-top-right-radius:7px;
+}
+.column1 #found h3 {
+    color: #339933;
+	padding: 1% 1%;
+}
+.column1 .find .searchbutton img {
+	cursor: pointer;
+	cursor: hand;
+}
+#found, #tracked  {
+	float: left;
+	width: 100%;
+	box-shadow: 3px -1px 7px -3px rgba(0, 0, 0, 0.7);
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	-moz-border-top-left-radius:7px;
+	-moz-border-top-right-radius:7px;
+	-webkit-border-top-left-radius:7px;
+	-webkit-border-top-right-radius:7px;
+	min-height:250px;
+}
+#found {
+	margin-top:20px;
+}
+#tracked {
+	margin-bottom:20px;
+	margin-top:20px;
+}
+.columnUpper {
+	height:150px;	
+}
+#divider_1 {
+	clear:both !important;
+	float:none !important;
+	margin:0 !important;
+	width:auto !important;
+	border: none !important;
+	font-weight:bold;
+}
+#detailsColumn .column2 p {
+	padding:2% 4%;
+}
+.column2 #tracked h3 {
+	color: #35859E;
+	padding: 1%;
+}
+.column2 .total .dollar  {
+	color: #666;
+}
+.column2 .button  {
+	float: right;
+	cursor:hand;
+	cursor:pointer;
+}
+#wizardPage1ContinueImage-bottom  {
+	float:right;
+}
+.main .steps {
+	float: left;
+	width: 16%;
+	clear: both;
+	text-align: center;
+}
+.main .steps .on, .main .steps .off {
+	padding: 5% 0 8%;
+	width: 100%;
+	float: left;
+}
+.main .steps .on .big {
+	font-size: 1.7em;
+	color: black;
+}
+.main .steps .on .small {
+	font-size: 0.7em;
+	color: black;
+}
+.main .steps .off {
+	display:none;
+}
+.main .steps .off .big {
+	font-size: 1.7em;
+	color: gray;
+}
+.main .steps .off .small {
+	font-size: 0.7em;
+	color: gray;
+}
+#personalmodule {
+	width:100%;
+}
+.editlink a, .editlink a:hover, a#hoverover {
+	border-bottom: 1px dashed #E9242B;
+}
+.editlink {
+    float: right;
+}		
+.main {
+	padding-top:15px;
+	clear:both;	
+}	
+.main .box1, .main .box2 {
+	box-shadow: 3px -1px 7px -3px rgba(0, 0, 0, 0.7);
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	-moz-border-top-left-radius:7px;
+	-moz-border-top-right-radius:7px;
+	-webkit-border-top-left-radius:7px;
+	-webkit-border-top-right-radius:7px;
+}
+.main .box1 {
+	z-index: 2;
+	width:46%;
+	float:left;
+	padding-left:1%;
+}
+.main .box2 {
+	float:left;
+	width:46%;
+	margin-left:3%;
+}
+.main .box1, .main .box2 {
+	padding:0 1%;
+}
+.box1 h1, .box2 h1 {
+    border-bottom: 2px solid black;
+    clear: both;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: left;
+}
+#wizardPage1Div, #wizardPage2Div, #wizardPage3Div, #wizardPage4Div, #wizardPage5Div {
+    float: none;
+    width: 100%;
+}
+form {
+	margin-bottom: 20px; 
+	}
+fieldset {
+	margin-bottom: 20px;
+	clear:both; 
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="tel"], textarea, select {
+	padding: 5px 4px;
+	outline: none;
+	width: 215px;
+	display: block;
+	background: #fff;
+	margin:5px 0 !important;
+	color:black;
+	border:1px solid #999;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+textarea {
+	min-height: 60px; 
+	border: 1px solid #999;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+label, legend {
+	display: block;
+	font-weight: bold;
+	font-size: .8em; 
+}
+input[type="checkbox"] {
+	display: inline;
+}
+label span, legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444; 
+}
+#txtTerms {
+	clear: both;
+	float: left;
+	width: 60%;
+	min-height: 120px;
+	font-size: 11px;
+	color: #666;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+#txtTerms textarea {
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.submitFeedback {
+	clear:both;
+	display:block;
+}
+span.agreeTerms {
+	font-size:.9em;
+}
+.btnContinue {
+	float:right;
+	padding:2% 2%;
+}
+.btnContinueNoPad {
+	float:right;
+}		
+.main .form {
+	width:65%;
+	float:left;
+}
+.main .form#formDiv {
+	width:100%;
+}
+.main .form p {
+	margin: 0px 0px 15px;
+	padding: 2% 4% 0 0;
+	font-size: .9em;
+}
+.main .form .smallText {
+	font-size:.7em;
+	padding:0;
+}
+.main .form #confirmVoucherList , .main .form #personalmodule, .main .form #billingmodule, .main .form #confirmTrackedAthletesList,
+.main .form #facebookmodule{
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.main .form #confirmVoucherList h5, .main .form #personalmodule h5, .main .form #billingmodule h5, 
+.main .form #confirmTrackedAthletesList h5, .main .form #facebookmodule h5 {
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 1.4em;
+    margin: 0 0 8px 0;
+	clear:both;
+}
+.main .form #confirmVoucherList .tag , .main .form #personalmodule .tag, .main .form #billingmodule .tag, .main .form #facebookmodule .tag {
+	color: black;
+}
+.main .form #confirmVoucherList .value , .main .form #personalmodule .value, .main .form #billingmodule .value{
+	color: #666;
+}
+.main .form #confirmVoucherList .tag , .main .form #personalmodule .tag, .main .form #billingmodule .tag, 
+	.main .form #confirmVoucherList .value, .main .form #personalmodule .value, .main .form #billingmodule .value{
+	font-size: 1em;
+	margin-bottom: 5px;
+	float: left;
+}
+#confirmTrackedAthletesList .athlete .name{
+	color:black;
+}		
+#contactForm {
+	padding-top:2%;
+}
+#found .athlete{
+	border-bottom: 2px solid #EDD81D;
+}
+#tracked .athlete, #confirmTrackedAthletesList .athlete{
+	border-bottom: 2px solid #35859E;
+}
+#confirmTrackedAthletesList .athlete{
+	margin:0;
+}
+.athlete {
+    clear: both;
+    float: left;
+	margin: 1% 2%;
+}
+.athlete .icon {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 18px;
+	height: 60px;
+}
+.whatsthis { 
+	float:left; 
+	font-size:.8em; 
+    margin:2% 0;
+	width: 100%;
+}
+.contentFloatLeft {
+	float: left; 
+	clear: both; 
+	padding-top:5%;
+}
+.tundra .dijitDialog .dijit_Dialog_1, .tundra .dijitDialog .dijit_Dialog_2, .tundra .dijitDialog .dijit_Dialog_3 {
+	max-width:300px;
+}
+#modalLoginForm	fieldset {
+	margin-bottom: 20px; 
+}
+#modalLoginForm input[type="text"], #modalLoginForm input[type="password"], #modalLoginForm input[type="email"], #modalLoginForm input[type="number"], #modalLoginForm textarea,#modalLoginForm select {
+	outline: none;
+	width: 175px;
+	max-width: 100%;
+	display: block;
+	background: #fff;
+	margin:5px 0 !important;
+	color:black;
+	border:1px solid #999;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#modalLoginForm textarea {
+	min-height: 60px; 
+	border: 1px solid #999;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px; 
+}
+.check { 
+	height: 20px; width: 20px; float: left; 
+}	
+.total { 
+	font-size: 1.6em; 
+}	
+.form .short { 
+	width:55px;
+	float:left;
+}
+.form .long {
+	width:90px;
+	float:left; 
+}
+.phone input {
+	display:inline;
+	margin-right:2%;
+}
+.header  {
+	margin: 0px;
+	padding: 25px 0px 0px;
+	height: 88px;
+	width: 900px;
+}
+.header-text {
+   margin: 5.4% 0 2.5% 0;
+}
+.header .logo {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 75px;
+	width: 370px;
+}
+.header .logo .noborder {
+	text-decoration: none;
+	border-style: none;
+}
+#logo{
+	float:left;
+}
+.contentButtom .logo .copyright{
+	float:left;
+}		
+.banner{	
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	height:145px;
+	width: 100%; 
+  	background:url('/public/images/backgrounds/rnrHeader.png'); 
+  	border-bottom: 2px solid black;
+}		
+.menu {
+	float:right;
+}
+.menu a:hover {
+	color: black;
+	border-bottom: 1px dashed black;
+}		
+.menu .box {
+	margin: 0px;
+	padding: 0px 15px 0px 0px;
+	float: left;
+}
+.menu .box .regular {
+	font-size: .9em;
+}
+.menu .box a #notloggedin {
+	color: #666;
+}
+.menu #credentials  {
+    float: right;
+    font-size: 0.9em;
+}
+#other-races{
+	text-align:center;	
+	float:right;
+}
+#other-races a{
+	color:black;
+	font-weight:bold;	
+}
+div.tout  {
+	width:100%;
+}
+.tout h2 {
+	font-size: 1.9em;
+	font-weight: normal;
+	padding-top:20px;
+	text-align: left;
+	border-bottom: 1px dashed black;
+	color:black;
+}
+.tout .text {
+	float: left;
+	font-size: 2.0em;
+	margin: 8% 0 0 0;
+	text-align: center;
+	width: 100%;
+}
+.text .updates p {
+	padding:0 3%;
+	max-width:100%;
+}
+.tout .icon-phone {
+  	float: right;
+  	padding: 3% 5% 1% 0;
+	width:30%;
+}
+.hand {
+	cursor:hand;
+	cursor:pointer;
+}
+.banner .menu .hand:hover{
+	border-bottom: 1px dashed black;
+	}
+.continue {
+	float:left;
+	padding:1% 0;
+}
+h2.learnMore {
+	color: #444;
+	font-size:1.2em;
+	font-weight:bold;
+}
+hr.dots {
+	border: 1px dashed #CCC;
+	height: 1px;
+}
+#metoo .athlete {
+	margin: 0px 10px 5px 10px;
+	padding: 0px;
+	clear: both;
+	float: left;
+	border-bottom: 2px solid #EDD81D;
+}
+#metoo .athlete .icon {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 18px;
+	height: 60px;
+	}
+.athlete .icon img {
+	margin: 20px 3px 0px 0px;
+	padding: 0px;
+}
+#metoo .athlete .icon img {
+	margin: 20px 3px 0px 0px;
+	padding: 0px;
+}
+.nonefound {
+	clear: both;
+	float: left;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	font-size: .9em;
+	border: 1px solid #333;
+	background: #666;
+	color: #FFF;
+	width: 85%;
+}
+.athlete .name {
+	float: left;
+	width: 90%;
+}
+.athlete .event, .athlete .city {
+	float: left;
+	width: 90%;
+	font-size: .9em;
+	color: #666;
+}
+.confirm{
+	margin-bottom:10px;
+}	
+.confirm span {
+	line-height: 1.25em;
+	vertical-align: baseline;
+}
+.error {
+	color: #C33;
+	font-size: .8em;
+	margin: 5px 0px 0px;
+	padding: 2px;
+	clear: both;
+	float: left;
+	width: 230px;
+	border: 1px solid #C33;
+	background: #F6CCCC;
+}
+.athlete .icon2 {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 20px;
+	height: 60px;
+}
+.athlete .icon2 img {
+	margin: 10px 3px 0px 0px;
+	padding: 0px;
+}
+.note {
+	clear: both;
+	margin: 10% 0;
+	padding: 5px;
+	float: left;
+	background: #F93;
+	border: 1px solid #F30;
+	width: 90%;
+}
+.SubmitInAccount{	 
+	clear:both; 
+	margin-top:10px; 
+}
+.RowInAccount{
+	clear:both; 
+	float:left; 
+	width: 100%; 
+	margin-left:10px; 
+	margin-bottom:15px;
+}
+.main .coverup .eventname {
+	font-size: 15px;
+	margin: 0px 0px 5px 10px;
+	clear: both;
+	float: left;
+	border-bottom: 2px solid #EED61A;
+	color: #333;
+}
+.main form h4 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 15px 0px 10px 0;
+	padding: 0px;
+	clear: both;
+}
+.main form .find div .confirmedemail {
+	font-size: 12px;
+	margin: 5px 20px 0px 0;
+	padding: 8px 0 0 0;
+	float: left;
+	color: #2BB156;
+}
+.main form .find .status-pending {
+	margin: 10px 0px 0px 0;
+	padding: 3px;
+	float: left;
+	background: #DFB27D;
+	border: 1px solid #DF972D;
+	font-size: 12px;
+	color: #333;
+}
+.main form .find .status-open {
+	margin: 10px 0px 0px 0;
+	padding: 3px;
+	float: left;
+	background: #C6E3EE;
+	border: 1px solid #35859E;
+	font-size: 12px;
+	color: #666;
+}
+.main form .find .status-confirmed {
+	margin: 8px 0px 0px 0px;
+	padding: 3px;
+	float: left;
+	background: #29A952;
+	border: 1px solid #1D7138;
+	font-size: 12px;
+	color: #FFF;
+}
+.main form .find .status-denied {
+	margin: 10px 0px 0px 0px;
+	padding: 3px;
+	float: left;
+	background: #FB9E9B;
+	border: 1px solid #CE5252;
+	font-size: 12px;
+	color: #333;
+}
+.main form .find .pending {
+	margin: 0px;
+	float: left;
+	width: 230px;
+	color: #333;
+	border: 1px solid #DF972D;
+}
+.main form .find .resend  {
+	font-size: 13px;
+	margin: 2px 0px 0px;
+	padding: 0px 0px 0px 30px;
+	float: left;
+	width: 175px;
+	clear: both;
+}
+.main form .find .denied {
+	margin: 0px;
+	float: left;
+	width: 230px;
+	color: #333;
+	border: 1px solid #CE5252;
+}
+.main form#trackingRequestsForm .find .textbox{
+	float:left;
+	}
+.spacer{
+	width:20px;
+	height:20px;
+	float:left;
+	}
+.sm-spacer{
+	width:10px;
+	height:10px;
+	float:left;
+	}
+#cvv2{
+	width:50px;
+	}
+.tag {
+    clear: both;
+    float: left;
+    width:130px;
+}
+.value {
+    float: left;
+    margin-left: 20px;
+}
+h5{
+	padding:10px 0;
+	font-size:1.25em;
+	clear:both;
+}
+.footer-image{
+	text-align:center;
+}
+.travelers-footer-image{
+	bottom: 0;
+    z-index: 0;	
+}
+.contentButtom {
+	margin: 0px auto;
+	padding: 0px 0px 0px ;
+}
+.contentButtom .logo {
+	margin-top: 70px;
+	display:block;
+	height: 60px;
+	width: 100%;
+	text-align:center;
+}
+.contentButtom .logo .link {
+	display:inline;
+	font-size: .9em;
+}
+.contentButtom .logo .link a {
+	margin:0 1%;
+	text-decoration: none;		
+}
+.contentButtom .logo .copyright {
+	font-size: .625em;
+	clear: both;
+	text-align: center;
+	width: 100%;
+}
+#center {
+	width: 320px;
+}
+#bgcontent {
+	width:90%;
+}
+.tout h2 {
+    padding-top: 72px;
+}
+.main .box1 {
+	z-index: 2;
+	width:94%;
+	float:left;
+	padding-left:1%;
+}
+.main .box2 {
+	float:left;
+	width:94%;
+	margin-left:0;
+}
+.main .steps {
+	width: 30%;
+}
+.main .steps .on, .main .steps .off {
+	width:80%;
+}
+.main .steps .on, .main .steps .off {
+	margin: 4% 0;
+}
+.icon-phone {
+	display:none;
+}
+.text p.updates  {
+	 padding: 20% 4% 0 0;
+	 font-size:.8em;
+}
+.column1, .column2 {
+    width: 100%;
+	float:none;
+}
+.column1 {
+    border-right: none;
+	padding-right: 0;
+}
+textarea {
+	min-height: 60px; 
+	border: 1px solid #999;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	-moz-border-top-left-radius:7px;
+	-moz-border-top-right-radius:7px;
+	-webkit-border-top-left-radius:7px;
+	-webkit-border-top-right-radius:7px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.tos textarea {
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+#txtTerms {
+	width:260px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.main .form #confirmVoucherList .tag , .main .form #personalmodule .tag, .main .form #billingmodule .tag, .main .form #facebookmodule .tag,
+	.main .form #confirmVoucherList .value, .main .form #personalmodule .value, .main .form #billingmodule .value, 
+	.main .form #facebookmodule .value{
+	font-size: 1em;
+	margin: 0px 0px 5px;
+	float: left;
+}	
+.form .short { 
+	width:55px; 
+}
+.tundra .dijitDialog {
+	width:280px;
+}
+.contentButtom .logo .link {
+	font-size: .8em;
+}
+.header-text{
+	margin-top: 5.4%;
+}	
+
+/* Mobile (Landscape) Note: Design for a width of 480px
+------------------------------------------------------- */
+@media only screen and (min-width: 480px) {
+	 
+	#center {
+		width: 420px;
+	}
+	#bgcontent {
+		width:94%;
+	}
+	.tundra .dijitDialog {
+		width:280px;
+	}
+	.header-text {
+	    width: 75%;
+	}
+	.tout h2 {
+	    padding-top: 60px;
+	}
+	.text p.updates  {
+		padding: 0% 6% 0 0;
+	}
+	.main .box1 {
+		z-index: 2;
+		width:95%;
+		float:left;
+		padding-left:1%;
+	}
+	.main .box2 {
+		float:left;
+		width:95%;
+		margin-left: 0;
+	}
+	.tout .text{
+		margin-top:70px;
+	}
+	.main .steps {
+		width: 30%;
+	}
+	.main .steps .on, .main .steps .off {
+		width:80%;
+		float:left;
+		display:block;
+	}
+	.main .steps .on, .main .steps .off {
+		margin: 4% 0;
+	}
+	.main .steps .off {
+		display:block;
+	}
+	#wizardPage1Div, #wizardPage2Div, #wizardPage3Div, #wizardPage4Div, #wizardPage5Div {
+	    float: left;
+	    width: 65%;
+	}
+	textarea {
+		overflow: -moz-scrollbars-vertical;
+		overflow-y:scroll;
+		overflow-x:hidden;
+	}
+	#txtTerms {
+		overflow: -moz-scrollbars-vertical;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		width:90%;
+	}	 
+}
+
+/* Tablet (Portrait) */
+@media only screen and (min-width: 600px) {
+	
+	body {
+		background-image:url(/public/images/backgrounds/rnr-bg-main.jpg);
+		background-position:center top;
+		position:fix;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
+	#center {
+		width: 600px;
+	}
+	#bgcontent {
+		width:96%;
+	}
+	.tout .text{
+		width:60%;
+	    margin-top: 8%;
+	}
+	.icon-phone {
+		display:block;
+	}
+	.header-text {
+		margin: 9.5% 0 0 2%;
+	    width: 64%;
+	}
+	.tout h2 {
+	    padding-top: 40px;
+	}
+	.text p.updates  {
+		padding: 0% 6% 0 0;
+	}
+	.main .box1, .main .box2 {
+		box-shadow: 3px -1px 7px -3px rgba(0, 0, 0, 0.7);
+		border-top-left-radius:7px;
+		border-top-right-radius:7px;
+		-moz-border-top-left-radius:7px;
+		-moz-border-top-right-radius:7px;
+		-webkit-border-top-left-radius:7px;
+		-webkit-border-top-right-radius:7px;
+	}
+	.main .box1 {
+		z-index: 2;
+		width:94%;
+		float:left;
+		padding-left:1%;
+	}
+	.main .box2 {
+		float:left;
+		width:94%;
+	}
+	.main .steps {
+		width:32%;
+	}
+	.main .steps .on, .main .steps .off {
+		float: left;
+		margin: 2% 0;
+		padding: 7% 0 7%;
+		width: 82%;
+	}
+	#wizardPage1Div, #wizardPage2Div, #wizardPage3Div, #wizardPage4Div, #wizardPage5Div {
+	    float: left;
+	    width: 65%;
+	}
+}
+
+/* Tablet (Landscape) Note: Design for a width of 768px */
+@media only screen and (min-width: 768px){
+	 
+	#center {
+		width: 768px;
+	}
+	#bgcontent {
+		width:96%;
+	}
+	.header-text {
+		margin: 7% 0 2.5% 2%;
+		width: inherit;
+	}
+	#other-races{	
+		float:none;
+	}
+	.main .box1 {
+		z-index: 2;
+		width:46%;
+		float:left;
+		padding-left:1%;
+	}
+	.main .box2 {
+		float:left;
+		width:46%;
+		margin-left:3%;
+	}
+	.main .box1, .main .box2 {
+		box-shadow: 3px -1px 7px -3px rgba(0, 0, 0, 0.7);
+		border-top-left-radius:7px;
+		border-top-right-radius:7px;
+		-moz-border-top-left-radius:7px;
+		-moz-border-top-right-radius:7px;
+		-webkit-border-top-left-radius:7px;
+		-webkit-border-top-right-radius:7px;
+	}
+	.main .steps {
+		width: 25%;
+	}
+	.main .steps .on, .main .steps .off {
+		width:80%;
+	}
+	.main .steps .on, .main .steps .off {
+		margin: 4% 0;
+	}
+	.column2 {
+	    float: right;
+	    width: 46%;
+	}
+	.column1{
+		float:left;
+		width:46%;
+	}
+	.column1 {
+	    border-right: 1px solid #999999;
+		padding-right: 3%;
+		z-index: 100;
+		min-height:260px;
+	}
+	.main .form{
+		width:75%;
+	}
+	#wizardPage1Div, #wizardPage2Div, #wizardPage3Div, #wizardPage4Div, #wizardPage5Div {
+	    width: 75%;
+	}
+		
+}
+
+/* Large Tablet Landscape, Notebook, Desktop */
+@media only screen and (min-width: 960px) {
+	
+	#center {
+		width: 960px;
+	}
+	#bgcontent {
+		width:98%;
+	}
+	.main .steps {
+		width: 20%;
+	}
+	.main .steps .on, .main .steps .off {
+		width:80%;
+	}
+	.main .steps .on, .main .steps .off {
+		margin: 4% 0;
+	}
+	.header-text{
+		margin-left:2%;
+		margin-top: 5.4%;
+	}
+}

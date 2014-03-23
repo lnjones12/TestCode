@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Search/Lucene/Analysis/TokenFilter
+END
+LowerCaseUtf8.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Search/Lucene/Analysis/TokenFilter/LowerCaseUtf8.php
+END
+ShortWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Search/Lucene/Analysis/TokenFilter/ShortWords.php
+END
+LowerCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Search/Lucene/Analysis/TokenFilter/LowerCase.php
+END
+StopWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/1089/Competitor%20Wireless/lib/Zend/Search/Lucene/Analysis/TokenFilter/StopWords.php
+END

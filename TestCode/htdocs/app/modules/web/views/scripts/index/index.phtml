@@ -1,0 +1,223 @@
+<?php 
+$this->headTitle('Index'); 
+?>
+
+
+<!-- <main> -->
+<div class="main">
+<?php
+
+?>
+	<div class="select-year">
+		<button onclick="getConfigs()" name="Get configurations" >Get Configurations</button>
+	</div>
+	<div id='result'></div>
+	<div class="brclear"></div>
+	<div class="select-year">
+		<label>Configuration Name: </label><input type="text" name="config_name" id="config_name" class="regular" /><br />
+		<label>Hostname: </label><input type="text" name="hostname" id="hostname" class="regular" /><br />
+		<label>Port: </label><input type="text" name="port" id="port" class="regular" /><br />
+		<button onclick="addConfig()" name="Add configuration" >Add Configuration</button>
+	</div>
+	<div class="brclear"></div>
+	<div class="select-year">
+		<select name="delete_config" id="delete_config">
+			<option value="-1">--Select--</option>
+			<?php
+				for($i = 0; $i < count($this->configurations); $i++){
+					$configuration = $this->configurations[$i];
+					echo '<option value="'.$configuration['name'].'" id="'.$configuration['name'].'">'.$configuration['name'].'</option>';
+				}
+			?>
+		</select>
+		<button onclick="deleteConfig()" name="Delete configuration" >Delete Configuration</button>
+	</div>
+	
+	<div class="select-year">
+		<button onclick="getpopularconfigs()" name="Get Popular configuration" >Get Popular Configurations</button>
+		<div id="popular"></div>
+	</div>
+	
+	<div class="select-year">
+		<input type="checkbox" id="nameSort" /><label style="margin-left:10px;">Sort by Name</label><br />
+		<input type="checkbox" id="hostnameSort" /><label style="margin-left:10px;">Sort by Hostname</label><br />
+		<input type="checkbox" id="portSort" /><label style="margin-left:10px;">Sort by Port</label><br />
+		<input type="checkbox" id="usernameSort" /><label style="margin-left:10px;">Sort by Username</label><br />
+		<button onclick="getListingsSorted()" name="Get Sorted Listings" >Get Sorted Listings</button>
+		<div id="sortedListings"></div>
+	</div>
+</div>
+
+
+<script>
+function getConfigs(){
+	dojo.xhrGet({
+		url: '/ajax/config/get/start/1/end/2',
+		timeout: 10000,
+		handleAs: 'json',
+		
+		load: function(response, args) {
+			
+			if (response.configurations) {	
+				
+				document.getElementById('result').innerHTML = JSON.stringify(response, undefined,"\n");
+			}
+		},
+		
+		error: function(response, args) {
+			var errorDialog = new dijit.Dialog({
+				title: 'Error',
+				content: 'An error has occurred, please try again.'
+			});
+			errorDialog.show();
+		}
+	});
+}
+
+function addConfig(){
+	var configname = document.getElementById('config_name').value;
+	var hostname = document.getElementById('hostname').value;
+	var port = document.getElementById('port').value;
+	if(configname == '' || hostname == '' || port == '' || isNaN(port)){
+		var errorDialog = new dijit.Dialog({
+				title: 'Error',
+				content: 'You must have a valid name, hostname, and port to add a configuration.'
+			});
+			errorDialog.show();
+	}
+	else{
+		dojo.xhrGet({
+			url: '/ajax/config/add/configname/'+configname+'/hostname/'+hostname+'/port/'+port,
+			timeout: 10000,
+			handleAs: 'json',
+			
+			load: function(response, args) {
+				
+				if (response.status == 'success') {	
+					if(!document.getElementById(configname)){
+						var select = document.getElementById('delete_config');
+						var opt = document.createElement('option');
+						opt.value = configname;
+						opt.innerHTML = configname;
+						opt.id = configname;
+						select.appendChild(opt);
+					}
+					var errorDialog = new dijit.Dialog({
+						title: 'Success',
+						content: 'Configuration was successfully added.'
+					});
+					errorDialog.show();
+					document.getElementById('config_name').value = '';
+					document.getElementById('hostname').value = '';
+					document.getElementById('port').value = '';
+				}
+			},
+			
+			error: function(response, args) {
+				var errorDialog = new dijit.Dialog({
+					title: 'Error',
+					content: 'An error has occurred, please try again.'
+				});
+				errorDialog.show();
+			}
+		});
+		
+	}
+}
+
+function deleteConfig(){
+	var deleteId = document.getElementById('delete_config').value;
+	if(deleteId != -1){
+		dojo.xhrGet({
+			url: '/ajax/config/delete/id/'+deleteId,
+			timeout: 10000,
+			handleAs: 'json',
+			
+			load: function(response, args) {
+				
+				if (response.status == 'success') {	
+					var option = document.getElementById(deleteId);
+					document.getElementById("delete_config").removeChild(option);
+					var errorDialog = new dijit.Dialog({
+						title: 'Success',
+						content: 'Configuration was successfully deleted.'
+					});
+					errorDialog.show();
+					//document.getElementById('result').innerHTML = JSON.stringify(response, undefined,"\n");
+				}
+			},
+			
+			error: function(response, args) {
+				var errorDialog = new dijit.Dialog({
+					title: 'Error',
+					content: 'An error has occurred, please try again.'
+				});
+				errorDialog.show();
+			}
+		});
+	}
+}
+
+function getpopularconfigs(){
+	dojo.xhrGet({
+		url: '/ajax/config/getwhere/entry/100000',
+		timeout: 10000,
+		handleAs: 'json',
+		
+		load: function(response, args) {
+			
+			if (response.status == 'success') {	
+				var responseString = '';
+				for(var i = 0; i < response.configurations.length; i++){
+					var configuration = response.configurations[i];
+					responseString += '<div style="border-top:1px solid;"><label>Name: '+configuration.name+'</label><br /><label>Hostname: '+configuration.hostname+'</label><br /><label>Port: '+configuration.port+'</label></div>';
+				}
+				document.getElementById('popular').innerHTML = responseString;
+			}
+		},
+		
+		error: function(response, args) {
+			var errorDialog = new dijit.Dialog({
+				title: 'Error',
+				content: 'An error has occurred, please try again.'
+			});
+			errorDialog.show();
+		}
+	});
+}
+
+function getListingsSorted(){
+	var nameSorted = document.getElementById('nameSort').checked;
+	var hostnameSorted = document.getElementById('hostnameSort').checked;
+	var portSorted = document.getElementById('portSort').checked;
+	var usernameSorted = document.getElementById('usernameSort').checked;
+	dojo.xhrGet({
+		url: '/ajax/config/getsorted/namesorted/'+nameSorted+'/hostnamesorted/'+hostnameSorted+'/portSorted/'+portSorted+'/usernameSorted/'+usernameSorted,
+		timeout: 10000,
+		handleAs: 'json',
+		
+		load: function(response, args) {
+			
+			if (response.status == 'success') {	
+				var responseString = '';
+				for(var i = 0; i < response.configurations.length; i++){
+					var configuration = response.configurations[i];
+					responseString += '<div style="border-top:1px solid;"><label>Name: '+configuration.name+'</label><br /><label>Hostname: '+configuration.hostname+'</label><br /><label>Port: '+configuration.port+'</label></div>';
+				}
+				document.getElementById('sortedListings').innerHTML = responseString;
+			}
+		},
+		
+		error: function(response, args) {
+			var errorDialog = new dijit.Dialog({
+				title: 'Error',
+				content: 'An error has occurred, please try again.'
+			});
+			errorDialog.show();
+		}
+	});
+}
+
+
+</script>
+<!-- </main> --> 

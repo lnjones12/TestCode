@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/TimeSync
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/TimeSync/Exception.php
+END
+Ntp.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/TimeSync/Ntp.php
+END
+Protocol.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/TimeSync/Protocol.php
+END
+Sntp.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/1092/Competitor%20Wireless/lib/Zend/TimeSync/Sntp.php
+END

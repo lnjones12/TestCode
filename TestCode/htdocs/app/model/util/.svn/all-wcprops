@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/9314/Competitor%20Wireless/app/model/util
+END
+RegexService.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/1237/Competitor%20Wireless/app/model/util/RegexService.php
+END
+HashcodeGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/1162/Competitor%20Wireless/app/model/util/HashcodeGenerator.php
+END
+DateFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1923/Competitor%20Wireless/app/model/util/DateFormat.php
+END
+EmailService.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/9314/Competitor%20Wireless/app/model/util/EmailService.php
+END

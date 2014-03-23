@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/InfoCard/Xml/KeyInfo
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/InfoCard/Xml/KeyInfo/Interface.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/InfoCard/Xml/KeyInfo/Abstract.php
+END
+Default.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/InfoCard/Xml/KeyInfo/Default.php
+END
+XmlDSig.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/1085/Competitor%20Wireless/lib/Zend/InfoCard/Xml/KeyInfo/XmlDSig.php
+END

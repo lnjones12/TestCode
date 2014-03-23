@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- <css> -->
+<link href="/public/css/style.css" rel="stylesheet" type="text/css" />
+<!-- </css> -->
+<link href="/public/css/tundra.css" rel="stylesheet" type="text/css" />
+<script>dojoConfig = {parseOnLoad: true}</script>
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
+
+<script type="text/javascript">
+require(["dojo/parser", "dijit/form/Button", "dijit/Dialog", "dijit/form/TextBox"]);
+</script>
+<?php
+	echo $this->headTitle(); 
+	echo $this->headScript();
+	echo $this->headLink();
+?>
+</head>
+
+<body class="tundra">
+
+<!-- <center> -->
+<div id="center"> 
+  <!-- <content> -->
+  <div id="bgcontent">  
+  <div class="banner">
+     <div class="logoText">	<a href="/" title="web service home">
+     	Ellen's Web Service</a>
+	</div>
+    </div>
+    <div id="content"> 
+	    <?php 
+	    echo $this->layout()->CONTENT; 
+	    ?>
+      <div class="brclear"></div>
+    </div>
+    <!-- </content> -->
+  </div>
+  <!-- </bgcontent> -->
+  <div class="brclear"></div>
+</div>
+<!-- </center> --> 
+</body>
+</html>

@@ -1,0 +1,108 @@
+<?php $this->headTitle('Competitor Wireless - Contact'); ?>
+
+<!-- <tout> -->
+
+<div class="tout">
+  <h2> Contact Us </h2>
+  <div class="brclear"></div>
+</div>
+<!-- </tout> --> 
+
+<!-- <main> -->
+<div class="main">
+  <p> Please use the form for any questions or issues you may have with Athlete Tracking. We will respond
+    to all emails within 24 hours. </p>
+    <div id="formDiv" class="form">
+  <!-- <form> -->
+  <form name="contactForm" id="contactForm">
+    <!-- <fieldset elements> -->
+    <fieldset class="find">
+      <label>Your Name:</label>
+      <input type="text" class="textbox" name="trackername" id="trackername"/>
+      <label>Your Email:</label>
+      <input type="text" class="textbox" name="contactEmail" id="contactEmail" />
+      <label>Event:</label>
+      <select name="eventName" id="eventName" class="longer">
+        <option value="">----</option>
+        <?php
+			foreach ($this->events as $event) {
+				echo '<option value="' . $event->name . ' - '.$event->year . '">' 
+					. $event->name . ' (' . $event->year . ')</option>';
+			}
+		?>	
+      </select>
+      <label>Reason for Contact:</label>
+      <select name="contactReason" id="contactReason" class="longer">
+        <option value="">----</option>
+        <option value="Account"> Account Issues</option>
+        <option value="Billing"> Billing Issues</option>
+        <option value="Refund"> Refund Requests</option>
+        <option value="General"> General Questions</option>
+        <option value="OptOut"> Opt-Out (Don't allow others to track me)</option>
+      </select>
+    </fieldset>
+    <!-- </fieldset elements> -->
+      <label>Questions:</label>
+      <textarea id="txtTerms" class="terms" name="contactMessage"></textarea>
+      <div class="submitFeedback"> 
+      	<button data-dojo-type="dijit/form/Button" type="button" class="hand" onclick="submitFeedback();" >SUBMIT</button>
+      </div>
+  </form>
+ </div>
+  <!-- </form> --> 
+</div>
+<div class="form" id="responseDiv" style="display:none;"><br/>
+  <br/>
+  <p>Your feedback has been submitted. <br/>
+    A representative will follow-up with you as soon as possible.</p>
+  <p>Thanks.<br/>
+    Support Team<br/>
+    Competitor Wireless</p>
+</div>
+<!-- </main> --> 
+<script type="text/javascript">
+	dojo.require('dijit.form.TextBox');
+	
+	dojo.addOnLoad(function(){
+		if (Auth.authenticatedUser != null) {
+			document.getElementById('contactEmail').value = Auth.authenticatedUser.email;
+		}
+	});	
+
+	function submitFeedback()
+	{
+		submitWebsiteFeedback('contactForm', toggleForm);
+	}
+	
+	function toggleForm()
+	{
+		dojo.byId('formDiv').style.display = 'none';
+		dojo.byId('responseDiv').style.display = '';
+	}
+	
+	function submitWebsiteFeedback(formName, callbackMethod){
+
+		standardWorkingDialog.show();
+	
+		dojo.xhrPost({
+			url: '/ajax/index/feedback',
+			form: formName,
+			timeout: AJAX_TIMEOUT_MEDIUM,
+			handleAs: 'json',
+		
+			load: function(response, args) {
+				standardWorkingDialog.hide();
+				callbackMethod(response);
+			}, 
+		
+			error: function(response, args) {
+				standardWorkingDialog.hide();
+ 				var errDlg = new dijit.Dialog({
+ 					title: 'Error',
+ 					content: 'An error has occurred: ' + response
+ 				});
+ 				errDlg.show();
+			}
+		});		
+}
+</script>

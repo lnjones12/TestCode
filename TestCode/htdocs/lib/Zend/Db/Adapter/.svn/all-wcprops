@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter/Exception.php
+END
+Mysqli.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter/Mysqli.php
+END
+Abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter/Abstract.php
+END
+Oracle.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter/Oracle.php
+END
+Db2.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/1096/Competitor%20Wireless/lib/Zend/Db/Adapter/Db2.php
+END
